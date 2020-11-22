@@ -28,7 +28,7 @@ mysqli_close($conn);
     align-items: center;
     flex-flow: row;
     height: 310px;
-    width: 635px;
+    width: 520px;
   }
 
   .slidis {
@@ -40,7 +40,7 @@ mysqli_close($conn);
   .bite {
     padding-top: 25px;
   }
-  
+
 </style>
 
 <!--Import jQuery before materialize.js-->
