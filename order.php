@@ -689,8 +689,14 @@ if (isset($_POST['submit'])) {
     margin: auto;
     padding: 20px;
     border-radius: 50px;
-    width: 65%;
+    width: 80%;
     background-color: white;
+  }
+
+  @media only screen and (min-width: 1650px) {
+    .sect {
+      width: 60%;
+    }
   }
 </style>
 
