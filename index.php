@@ -39,6 +39,10 @@ mysqli_close($conn);
   .bite {
     padding-top: 25px;
   }
+
+  .md3{
+    width: 635px;
+  }
 </style>
 
 <!--Import jQuery before materialize.js-->
