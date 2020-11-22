@@ -29,7 +29,7 @@
     <div class="container">
       <a href="index.php" class="brand-logo brand-text">FreePizzas4All</a>
       <ul id="nav-mobile" class="right hide-on-small-and-down">
-        <li><a href="../add.php" class="btn brand waves-effect z-depth-0">ADD A PIZZA</a></li>
+        <li><a href="../FreePizzas4All/add.php" class="btn brand waves-effect z-depth-0">ADD A PIZZA</a></li>
       </ul>
     </div>
   </nav>
