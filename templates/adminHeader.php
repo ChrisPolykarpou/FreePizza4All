@@ -28,6 +28,7 @@
             <a href="index.php" class="brand-logo brand-text">Admin Page</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
                 <li><a href="viewOrders.php" class="btn brand waves-effect z-depth-0">VIEW ORDERS</a></li>
+                <li><a href="logout.php" class="btn brand waves-effect z-depth-0">LOG OUT</a></li>
             </ul>
         </div>
     </nav>
