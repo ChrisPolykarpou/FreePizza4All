@@ -547,7 +547,6 @@ if (isset($_POST['submit'])) {
                             </div>
                           <!--[if (mso)|(IE)]></td><td style="width: 280px" valign="top"><![endif]-->
                             <div class="webversion" style="display: table-cell;Float: left;font-size: 12px;line-height: 19px;max-width: 280px;min-width: 139px; width: 139px;width: calc(14100% - 78680px);padding: 10px 0 5px 0;text-align: right;color: #999;font-family: Georgia,serif;">
-                              <p style="Margin-top: 0;Margin-bottom: 0;">No images? <webversion style="text-decoration: underline;">Click here</webversion></p>
                             </div>
                           <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
                           </div>
