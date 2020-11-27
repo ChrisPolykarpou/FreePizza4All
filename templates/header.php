@@ -7,7 +7,7 @@ if (!isset($_SESSION)) {
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <!-- Register Page -->
-  <?php if ($_SERVER['PHP_SELF'] == '/tuts/admin/index.php') { ?>
+  <?php if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/admin/index.php') { ?>
     <title>Admin Panel</title>
   <?php } else { ?>
     <title>Delicious Pizzas</title>
@@ -50,7 +50,7 @@ if (!isset($_SESSION)) {
   <nav class="white z-depth-0">
     <div class="container">
       <!-- Home page -->
-      <?php if ($_SERVER['PHP_SELF'] == '/tuts/index.php') { ?>
+      <?php if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/index.php') { ?>
         <a href="index.php" class="brand-logo brand-text">FreePizzas4All</a>
         // Check if the user is already logged in
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
@@ -65,31 +65,31 @@ if (!isset($_SESSION)) {
             <li><a href="users/register.php" class="btn brand waves-effect z-depth-1">SIGN UP<i class="material-icons left">person_add</i></a></li>
           </ul>
         <?php } ?>
-      <?php } else if ($_SERVER['PHP_SELF'] == '/tuts/users/register.php') { ?>
+      <?php } else if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/users/register.php') { ?>
         <!-- Register Page -->
         <a href="../index.php" class="brand-logo brand-text">FreePizzas4All</a>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
           <li><a href="login.php" class="btn brand waves-effect z-depth-1">LOGIN<i class="material-icons left">login</i></a></li>
         </ul>
-      <?php } else if ($_SERVER['PHP_SELF'] == '/tuts/users/login.php') { ?>
+      <?php } else if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/users/login.php') { ?>
         <!-- Login Page -->
         <a href="../index.php" class="brand-logo brand-text">FreePizzas4All</a>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
           <li><a href="register.php" class="btn brand waves-effect z-depth-1">SIGN UP<i class="material-icons left">person_add</i></a></li>
         </ul>
-      <?php } else if ($_SERVER['PHP_SELF'] == '/tuts/users/userInfo.php') { ?>
+      <?php } else if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/users/userInfo.php') { ?>
         <!-- User Page -->
         <a href="../index.php" class="brand-logo brand-text">FreePizzas4All</a>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
           <li><a href="logout.php" class="btn brand waves-effect z-depth-1">LOGOUT<i class="material-icons left">exit_to_app</i></a></li>
         </ul>
-      <?php } else if ($_SERVER['PHP_SELF'] == '/tuts/admin/index.php') { ?>
+      <?php } else if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/admin/index.php') { ?>
         <!-- ADMIN Login Page -->
         <a href="../index.php" class="brand-logo brand-text">Admin Panel</a>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
           <li><a href="../index.php" class="btn brand waves-effect z-depth-1">BACK TO WEBSITE<i class="material-icons left">exit_to_app</i></a></li>
         </ul>
-      <?php } else if ($_SERVER['PHP_SELF'] == '/tuts/admin/login.php') { ?>
+      <?php } else if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/admin/login.php') { ?>
         <!-- ADMIN Home Page -->
         <a href="login.php" class="brand-logo brand-text">Admin Panel</a>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
@@ -99,19 +99,19 @@ if (!isset($_SESSION)) {
           </li>
         </ul>
 
-      <?php } else if ($_SERVER['PHP_SELF'] == '/tuts/admin/viewOrders.php') { ?>
+      <?php } else if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/admin/viewOrders.php') { ?>
         <!-- ADMIN Orders Page -->
         <a href="login.php" class="brand-logo brand-text">Admin Panel</a>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
           <li><a href="logout.php" class="btn brand waves-effect z-depth-1">LOG OUT<i class="material-icons left">exit_to_app</i></a></li>
         </ul>
-        <?php } else if ($_SERVER['PHP_SELF'] == '/tuts/admin/add.php') { ?>?>
+        <?php } else if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/admin/add.php') { ?>?>
         <!-- ADMIN Add Pizza Page -->
         <a href="login.php" class="brand-logo brand-text">Admin Panel</a>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
           <li><a href="logout.php" class="btn brand waves-effect z-depth-1">LOG OUT<i class="material-icons left">exit_to_app</i></a></li>
         </ul>
-        <?php } else if ($_SERVER['PHP_SELF'] == '/tuts/admin/details-admin.php') { ?>?>
+        <?php } else if ($_SERVER['PHP_SELF'] == '/JavaBridge/FreePizza4All/admin/details-admin.php') { ?>?>
         <!-- ADMIN delete Page -->
         <a href="login.php" class="brand-logo brand-text">Admin Panel</a>
         <ul id="nav-mobile" class="right hide-on-small-and-down">
