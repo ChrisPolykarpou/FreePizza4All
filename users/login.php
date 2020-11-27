@@ -3,8 +3,8 @@
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if (isset($_SESSION["ad-loggedin"]) && $_SESSION["ad-loggedin"] === true) {
-    header("location: login.php");
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header("location: ../index.php");
     exit;
 }
 
@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
         // Prepare a select statement
-        $sql = "SELECT username, password FROM admin WHERE username = ?";
+        $sql = "SELECT username, password FROM users WHERE username = ?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -54,10 +54,11 @@ if (isset($_POST['login'])) {
                             session_start();
 
                             // Store data in session variables
-                            $_SESSION["ad-loggedin"] = true;
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["username"] = $username;
 
                             // Redirect user to welcome page
-                            header("location: login.php");
+                            header("location: ../index.php");
                         } else {
                             // Display an error message if password is not valid
                             $password_err = "The password you entered is incorrect";
@@ -85,7 +86,7 @@ if (isset($_POST['login'])) {
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
 <?php include('../templates/header.php') ?>
-<title>Admin Login</title>
+<title>Member Login</title>
 <style>
     .section {
         width: 400px;
@@ -146,13 +147,15 @@ if (isset($_POST['login'])) {
                     <input name="password" id="password" type="password" class="validate">
                     <label for="password">Pasword</label>
                 </div>
-                <div class="center">
-                    <button type="submit" name="login" class="btn brand">Login</button>
-                </div>
+            </div>
+            <div class="center">
+                <button type="submit" name="login" class="btn brand">Login</button>
             </div>
         </form>
+        <div class="center">
+            <p>Not a member? <a href="register.php">Register Now!</a></p>
+        </div>
     </div>
 </div>
-</form>
 
 </html>

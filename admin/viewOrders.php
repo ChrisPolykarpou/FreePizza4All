@@ -3,7 +3,7 @@
 session_start();
 
 // Check if the user is logged in.
-if (!(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)) {
+if (!(isset($_SESSION["ad-loggedin"]) && $_SESSION["ad-loggedin"] === true)) {
     header("location: index.php");
     exit;
 }
@@ -45,7 +45,7 @@ mysqli_close($conn);
         margin-bottom: 4px;
     }
 </style>
-<?php include('../templates/adminHeader.php') ?>
+<?php include('../templates/header.php') ?>
 <h4 class="center grey-text">ALL ORDERS</h4>
 <section class="section">
     <table class="centered">

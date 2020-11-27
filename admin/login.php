@@ -15,7 +15,7 @@ mysqli_close($conn);
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php include('../templates/adminHeader.php') ?>
+<?php include('../templates/header.php') ?>
 <style media="screen">
   .pizza {
     width: 180px;
@@ -30,6 +30,7 @@ mysqli_close($conn);
     height: 310px;
   }
 </style>
+
 
 <h4 class="center grey-text">Configure Pizza Shop</h4>
 <div class="container">

@@ -1,6 +1,6 @@
 <?php
 
-include("config/db_connect.php");
+include("../config/db_connect.php");
 
 $errors = ['title' => '', 'Ingredients' => ''];
 $email = '';
@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
     $sql = "INSERT INTO pizzas(title, Ingredients) VALUES('$title', '$ingredients')";
     if (mysqli_query($conn, $sql)) {
       //data inserted
-      header('location: admin/index.php');
+      header('location: index.php');
     } else {
       echo "query error: " . mysqli_error($conn);
     }
@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 <html>
 
 <body>
-  <?php include('templates/header.php') ?>
+  <?php include('../templates/header.php') ?>
 
   <section class="container grey-text">
     <h4 class="center">Add a Pizza</h4>
@@ -57,8 +57,5 @@ if (isset($_POST['submit'])) {
       </div>
     </form>
   </section>
-
-
-  <?php include('templates/footer.php') ?>
 
 </html>

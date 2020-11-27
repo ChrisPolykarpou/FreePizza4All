@@ -99,7 +99,7 @@ mysqli_close($conn);
               <?php endforeach; ?>
             </ul>
             <div class="card-action right-align">
-              <a href="details.php?id=<?php echo $pizza['id']; ?>" class="brand-text">more info</a>
+              <a href="users/setFavourite.php?id=<?php echo $pizza['id']; ?>" class="brand-text">Add to Favourites</a>
               <a href="order.php?id=<?php echo $pizza['id']; ?>" class="brand-text">Order Now!</a>
             </div>
           </div>

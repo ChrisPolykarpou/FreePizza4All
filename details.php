@@ -57,7 +57,6 @@ if (isset($_GET['id'])) {
 <div class="details-cont">
   <div class="container center details">
     <h3 class="center">Pizza: <?php echo htmlspecialchars($pizza['title']); ?></h3>
-    <h4 class="center">Creator: <?php echo htmlspecialchars($pizza['Email']); ?></h4>
     <h5 class="center">Ingredients: <?php echo htmlspecialchars($pizza['Ingredients']); ?></h5>
     <h5 class="center">Created at: <?php echo htmlspecialchars($pizza['CreatedAt']); ?></h5>
     <img src="pizza.jpg" class="circle pizza" alt="pizza-icon">

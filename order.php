@@ -7,8 +7,17 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 session_start();
+$user = ['email' => '', 'username' => '', 'address' => ''];
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+  $username = $_SESSION["username"];
+  $sql = "SELECT * FROM users WHERE username = '$username' ";
 
-$errors = ['email' => '', 'name' => '', 'surname' => '', 'address' => ''];
+  $result = mysqli_query($conn, $sql);
+  //save results
+  $user = mysqli_fetch_assoc($result);
+}
+
+$errors = ['email' => '', 'name' => '', 'address' => ''];
 $email = '';
 $name = '';
 $surname = '';
@@ -46,20 +55,16 @@ if (isset($_POST['submit'])) {
     }
   }
   if (empty($_POST['name'])) {
-    $errors['name'] = "Name and Surname is required";
+    $errors['name'] = "Name is required";
   } else {
     $name = $_POST['name'];
     if (!preg_match('/^[a-zA-Z\s]+$/', $name)) {
-      $errors['name'] = "Name and Surname must be letters only";
+      $errors['name'] = "Name must be letters only";
     }
   }
   if (empty($_POST['surname'])) {
-    $errors['surname'] = "Name and Surname is required";
   } else {
     $surname = $_POST['surname'];
-    if (!preg_match('/^[a-zA-Z\s]+$/', $surname)) {
-      $errors['surname'] = "Name and Surname must be letters only";
-    }
   }
   if (empty($_POST['address'])) {
     $errors['address'] = "Address is required";
@@ -698,8 +703,13 @@ if (isset($_POST['submit'])) {
     }
   }
 </style>
-
-<h2 class="center title">Order Pizza (<?php echo $_SESSION['title'] ?>)</h2>
+<?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
+  <h2 class="center title">Order as <b><?php
+                                        echo $_SESSION["username"]; ?></b> (<?php
+                                                                            echo $_SESSION['title'] ?>)</h2>
+<?php } else { ?>
+  <h2 class="center title">Order as a <b>Guest</b> (<?php echo $_SESSION['title'] ?>)</h2>
+<?php } ?>
 <div class="sect">
   <div>
     <img class="img" src="img/pizza1.jpg" alt="pizza-img">
@@ -711,25 +721,25 @@ if (isset($_POST['submit'])) {
           <div class="red-text"><?php echo $errors['name']; ?></div>
           <div class="row">
             <div class="input-field col s6">
-              <input id="first_name" name="name" type="text" class="validate">
+              <input id="first_name" name="name" value="<?php echo $user['username']; ?>" type="text" class="validate">
               <label for="first_name">First Name</label>
             </div>
             <div class="input-field col s6">
               <input id="last_name" name="surname" type="text" class="validate">
-              <label for="last_name">Last Name</label>
+              <label for="last_name">Last Name (Optional)</label>
             </div>
           </div>
           <div class="red-text"><?php echo $errors['email']; ?></div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" name="email" type="email" class="validate">
+              <input id="email" name="email" value="<?php echo $user['email']; ?>" type="email" class="validate">
               <label for="email">Email</label>
             </div>
           </div>
           <div class="red-text"><?php echo $errors['address']; ?></div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="address" name="address" type="text" class="validate">
+              <input id="address" name="address" value="<?php echo $user['address']; ?>" type="text" class="validate">
               <label for="address">Address</label>
             </div>
           </div>
