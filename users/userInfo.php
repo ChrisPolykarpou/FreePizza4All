@@ -84,6 +84,7 @@ mysqli_close($conn);
                                     <button action=<?php echo $_SERVER['PHP_SELF']; ?> class="brand btn waves-effect waves-light" name="dlt-button">Delete Favourite
                                         <i class="material-icons right">delete</i>
                                     </button>
+                                    <a href="../order.php?id=<?php echo $favourite['pizza']; ?>" class="btn brand">Order Now!<i class="material-icons right">shopping_bag</i></a>
                                 </div>
                             </form>
                         </td>
