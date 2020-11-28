@@ -22,16 +22,13 @@
 </style>
 
 <body>
-
-
     <div class="section">
-
         <h4 class="center grey-text title">Everyone Loves pizza! This website provides <b>FREE pizzas</b> for everyone!</h4>
         <div class="divider"></div>
         <div class="section">
             <h5>Getting started</h5>
+            <li><a href="user/add.php">Sign up</a></li>
             <li><a href="user/order.php">Order your first Free Pizza</a></li>
-            <li><a href="user/add.php">Create your own favourite pizza</a></li>
         </div>
         <div class="divider"></div>
         <div class="section">
