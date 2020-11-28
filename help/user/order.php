@@ -5,7 +5,7 @@
 
 <style>
     .section {
-        width: 1000px;
+        width: 1200px;
         position: realative;
         margin: auto;
         padding: 20px;
@@ -14,7 +14,8 @@
     }
 </style>
 <div class="section white">
-    <h5 class="grey-text">1. Find your favourite pizza or <a href="add.php">Create your own</a></h5>
+    <h4 class="grey-text">You can either shop as a guest or <a href="add.php">sign up</a> as our member.</h4>
+    <h5 class="grey-text">1. Find your favourite pizza or pick from your favourites</h5>
     <h5 class="grey-text">2. Click "ORDER NOW"</h5>
     <h5 class="grey-text">3. Fill all the fields in the form (name, surname, email, address). Click "send order"</h5>
     <h5 class="grey-text">4. You will receive email confirmation with details of your Pizza order</h5>
