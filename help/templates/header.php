@@ -33,7 +33,7 @@
                 <a href="../index.php" class="brand-logo brand-text">FreePizzas4All - Docs</a>
             <?php } ?>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
-                <li><a href="../freepizza4all" class="btn brand waves-effect z-depth-0">START NOW</a></li>
+                <li><a href="../index.php" class="btn brand waves-effect z-depth-0">START NOW</a></li>
             </ul>
         </div>
     </nav>
